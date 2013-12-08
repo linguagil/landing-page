@@ -1,12 +1,7 @@
 ( function(window, document, $, undefined) {
   'use strict';
 
-  $('#menu-close').click(function(e) {
-    e.preventDefault();
-    $('#sidebar-wrapper').toggleClass('active');
-  });
-
-  $('#menu-toggle').click(function(e) {
+  $('#menu-close, #menu-toggle').click(function(e) {
     e.preventDefault();
     $('#sidebar-wrapper').toggleClass('active');
   });

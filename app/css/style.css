@@ -20,6 +20,10 @@ body {
 }
 
 /* Side Menu */
+#menu-close {
+  position: relative;
+  z-index: 100;
+}
 
 #sidebar-wrapper {
   margin-left: -250px;
