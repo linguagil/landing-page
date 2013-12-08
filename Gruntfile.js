@@ -118,9 +118,18 @@ module.exports = function (grunt) {
     },
     // not used since Uglify task does concat,
     // but still available if needed
-    /*concat: {
-      dist: {}
-    },*/
+    concat: {
+      dist: {
+        files: {
+          src: [
+            '<%= yeoman.dist %>/js/{,*/}*.js',
+            '<%= yeoman.dist %>/css/{,*/}*.css',
+            '<%= yeoman.dist %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            '<%= yeoman.dist %>/css/fonts/*'
+          ]
+        }
+      }
+    },
     rev: {
       dist: {
         files: {
@@ -258,11 +267,12 @@ module.exports = function (grunt) {
         }
       }
     }
-    /*,
-   // htmllint: {
+    /*
+    ,
+    htmllint: {
        dist: ['<%= yeoman.dist %>/*.html']
-    }*/
-
+    }
+    */
   });
 
   grunt.loadNpmTasks('grunt-html');
@@ -287,7 +297,7 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
-    //'concat',
+    'concat',
     'copy:dist',
     //'cdnify',
     'cssmin',
