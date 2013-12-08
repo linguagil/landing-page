@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if lt IE 8]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -35,11 +35,12 @@
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-        <li class="sidebar-brand"><a href="http://startbootstrap.com">Linguágil 2014</a></li>
+        <li class="sidebar-brand"><a href="http://linguagil.com.br">Linguágil 2015</a></li>
         <li><a href="#top">Início</a></li>
-        <li><a href="#services">Sobre</a></li>
-        <li><a href="#portfolio">Eventos anteriores</a></li>
-        <li><a href="#contact">Localização</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#services">Saiba mais</a></li>
+  <!--      <li><a href="#portfolio">Eventos anteriores</a></li> -->
+	<!--      <li><a href="#contact">Localização</a></li> -->
       </ul>
     </div>
     <!-- /Side Menu -->
@@ -49,7 +50,7 @@
       <div class="vert-text">
         <h1><img src="img/linguagil-logo.png" width="350" height="178" alt="Linguágil 2014" /></h1>
         <h3>Está chegando o melhor evento de 2014!</h3>
-        <a href="#services" class="btn btn-default btn-lg btn-danger">Saiba mais</a>
+        <a href="#about" class="btn btn-default btn-lg btn-danger">Saiba mais</a>
       </div>
     </div>
     <!-- /Full Page Image Header Area -->
@@ -62,9 +63,9 @@
             <h2 class="form-signin-heading">Cadastre-se e receba as novidades!</h2>
             <p>Nós já estamos trabalhando duro para que o evento seja um sucesso!</p>
             <p>Fique por dentro das novidades!</p>
-            <form class="form-signin newsletter" role="form">
+            <form class="form-signin newsletter" method="post" action="save_email.php">
               <div class="input-group input-group-lg">
-                <span class="input-group-addon">@</span>
+                <span class="input-group-addon"></span>
                 <input type="text" name="name" class="form-control" placeholder="Seu nome" required autofocus />
               </div>
 
@@ -87,7 +88,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 col-md-offset-4 text-center">
-            <h2>Sobre o evento</h2>
+            <h2>Saiba mais</h2>
             <hr>
           </div>
         </div>
@@ -96,14 +97,14 @@
             <div class="service-item">
               <i class="service-icon fa fa-terminal fa-5x"></i>
               <h4>Show me the code</h4>
-              <p>Minicursos com o foco em boas práticas e na especialização do desenvolvedor. Além claro de uma boa dose de network, café e diversão.</p>
+              <p>Minicursos com o foco em boas práticas e na especialização do desenvolvedor. Além, claro, de uma boa dose de <em>networking</em>, café e diversão.</p>
             </div>
           </div>
           <div class="col-md-4 text-center">
             <div class="service-item">
               <i class="service-icon fa fa-magnet"></i>
-              <h4>Problem Solving</h4>
-              <p>Need to know how magnets work? Our problem solving solutions team can help you identify problems and conduct exploratory research.</p>
+              <h4>LinguÁgil Labs</h4>
+              <p>Estamos preparando o LinguÁgil Labs, uma competição que vai agitar as comunidades de tecnologia de Salvador.</p>
             </div>
           </div>
         </div>
@@ -111,15 +112,15 @@
     </div>
     <!-- /Services -->
 
-    <!-- Callout -->
+    <!-- Callout -
     <div class="callout">
       <div class="vert-text">
         <h1>Eventos anteriores</h1>
       </div>
     </div>
-    <!-- /Callout -->
+    /Callout -->
 
-    <!-- Portfolio -->
+    <!-- Portfolio 
     <div id="portfolio" class="portfolio">
       <div class="container">
         <div class="row">
@@ -133,34 +134,34 @@
         <div class="row">
           <div class="col-md-4 col-md-offset-2 text-center">
             <div class="portfolio-item">
-              <a href="#"><img class="img-portfolio img-responsive" src="http://lorempixel.com/500/350/transport"></a>
-              <h4>Linguágil 2010</h4>
+              <a href="#"><img alt="foto" class="img-portfolio img-responsive" src="http://lorempixel.com/500/350/transport"></a>
+              <h4>Linguágil 2009</h4>
             </div>
           </div>
           <div class="col-md-4 text-center">
             <div class="portfolio-item">
-              <a href="#"><img class="img-portfolio img-responsive" src="http://lorempixel.com/500/350/sports"></a>
-              <h4>Linguágil 2011</h4>
+              <a href="#"><img alt="foto" class="img-portfolio img-responsive" src="http://lorempixel.com/500/350/sports"></a>
+              <h4>Linguágil 2010</h4>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4 col-md-offset-2 text-center">
             <div class="portfolio-item">
-              <a href="#"><img class="img-portfolio img-responsive" src="http://lorempixel.com/500/350/business"></a>
-              <h4>Linguágil 2012</h4>
+              <a href="#"><img alt="foto" class="img-portfolio img-responsive" src="http://lorempixel.com/500/350/business"></a>
+              <h4>Linguágil 2011</h4>
             </div>
           </div>
           <div class="col-md-4 text-center">
             <div class="portfolio-item">
-              <a href="#"><img class="img-portfolio img-responsive" src="http://lorempixel.com/500/350/business"></a>
-              <h4>Linguágil 2013</h4>
+              <a href="#"><img alt="foto" class="img-portfolio img-responsive" src="http://lorempixel.com/500/350/business"></a>
+              <h4>Linguágil 2012</h4>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- /Portfolio -->
+    !- - /Portfolio -->
 
     <!-- Call to Action -->
     <div class="call-to-action">
@@ -168,18 +169,18 @@
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
             <h3>Gostaria de patrocinar o evento?</h3>
-            <a href="#" class="btn btn-lg btn-primary">Entre em contato</a>
+            <a href="mailto:linguagil@linguagil.com.br" class="btn btn-lg btn-primary">Entre em contato</a>
           </div>
         </div>
       </div>
     </div>
     <!-- /Call to Action -->
 
-    <!-- Map -->
+    <!-- Map 
     <div id="contact" class="map">
       <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=UCSAL+-+Campus+da+Federa%C3%A7%C3%A3o+-+Avenida+Cardeal+da+Silva,+Salvador+-+Bahia&amp;aq=0&amp;oq=cat%C3%B3lica&amp;sll=-12.981036,-38.496094&amp;sspn=0.006001,0.010568&amp;ie=UTF8&amp;hq=UCSAL+-+Campus+da+Federa%C3%A7%C3%A3o+-+Avenida+Cardeal+da+Silva,&amp;hnear=Salvador+-+Bahia&amp;ll=-12.997213,-38.508839&amp;spn=0.059029,0.007795&amp;t=m&amp;output=embed"></iframe><br /><small>Visualizar <a href="https://maps.google.com.br/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=UCSAL+-+Campus+da+Federa%C3%A7%C3%A3o+-+Avenida+Cardeal+da+Silva,+Salvador+-+Bahia&amp;aq=0&amp;oq=cat%C3%B3lica&amp;sll=-12.981036,-38.496094&amp;sspn=0.006001,0.010568&amp;ie=UTF8&amp;hq=UCSAL+-+Campus+da+Federa%C3%A7%C3%A3o+-+Avenida+Cardeal+da+Silva,&amp;hnear=Salvador+-+Bahia&amp;ll=-12.997213,-38.508839&amp;spn=0.059029,0.007795&amp;t=m" style="color:#0000FF;text-align:left">Salvador - BA</a> no Google Maps</small>
     </div>
-    <!-- /Map -->
+    /Map -->
 
     <!-- Footer -->
     <footer>
@@ -195,7 +196,7 @@
               <a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
             </div>
             <hr>
-            <p>Copyright &copy; Company 2013</p>
+            <p>Copyright &copy; Grupo LinguÁgil 2013</p>
           </div>
         </div>
       </div>
@@ -210,6 +211,15 @@
     <!-- build:js({.tmp,app}) js/scripts.js -->
     <script src="js/main.js"></script>
     <!-- endbuild -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46291927-1', 'linguagil.com.br');
+      ga('send', 'pageview');
+    </script>
 
   </body>
 
