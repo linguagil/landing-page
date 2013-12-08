@@ -1,8 +1,9 @@
 {
   "name": "Linguagil2014",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "homepage": "https://github.com/linguagil/landing-page",
   "authors": [
+    "Mauricio Vieira <mauricio@linguagil.com.br>",
     "willmendesneto <willmendesneto@gmail.com>"
   ],
   "description": "Website - Linguagil 2014",

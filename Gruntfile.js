@@ -23,7 +23,6 @@ module.exports = function (grunt) {
   };
 
   try {
-    //yeomanConfig.app = require('./bower.json').appPath || yeomanConfig.app;
     yeomanConfig.app = yeomanConfig.app;
   } catch (e) {}
 
@@ -188,8 +187,6 @@ module.exports = function (grunt) {
          }
       }
     },
-
-
     htmlmin: {
       dist: {
         options: {
@@ -210,6 +207,11 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>'
         }]
       }
+    },
+    bower: {
+      install: {
+        verbose: true,
+      } 
     },
     // Put files not handled in other tasks here
     copy: {
@@ -303,9 +305,15 @@ module.exports = function (grunt) {
     'usemin'
   ]);
 
-  grunt.registerTask('default', [
+  grunt.registerTask('travis', [
+    'bower:install',
     'jshint',
     'build',
     'htmllint'
+  ]);
+
+  grunt.registerTask('default', [
+    'jshint',
+    'build'
   ]);
 };
