@@ -1,5 +1,7 @@
 landing-page
 ============
+[![Build Status](https://travis-ci.org/linguagil/landing-page.png)](https://travis-ci.org/linguagil/landing-page)
+
 
 Landing Page do LinguÁgil.
 
