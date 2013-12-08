@@ -1,0 +1,17 @@
+{
+  "name": "Linguagil2014",
+  "version": "0.0.1",
+  "homepage": "https://github.com/linguagil/landing-page",
+  "authors": [
+    "willmendesneto <willmendesneto@gmail.com>"
+  ],
+  "description": "Website - Linguagil 2014",
+  "keywords": [
+    "technology",
+    "development",
+    "agile",
+    "network"
+  ],
+  "license": "MIT",
+  "private": true
+}
