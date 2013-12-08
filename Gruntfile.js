@@ -266,13 +266,10 @@ module.exports = function (grunt) {
           ]
         }
       }
-    }
-    /*
-    ,
+    },
     htmllint: {
        dist: ['<%= yeoman.dist %>/*.html']
     }
-    */
   });
 
   grunt.loadNpmTasks('grunt-html');
@@ -309,6 +306,6 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'jshint',
     'build',
-    //'htmllint'
+    'htmllint'
   ]);
 };
