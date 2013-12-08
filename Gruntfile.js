@@ -203,7 +203,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>',
-          src: ['*.html', 'views/*.html'],
+          src: ['*.html'],
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -224,7 +224,6 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
-            //'bower_components/**/*',
             'img/{,*/}*.{gif,webp}',
             'css/fonts/*'
           ]
