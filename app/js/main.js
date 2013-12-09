@@ -3,9 +3,11 @@
   /**
    *  Calling fastclick in application
    */
-  /* breaking jshint
+  var FastClick = window.FastClick || {};
   FastClick.attach(document.body);
-  */
+
+  //  Add target blank in realtime for htmllint validation
+  $('a[rel="external"]').attr('target','_blank');
 
   $('#menu-close, #menu-toggle').click(function(e) {
     e.preventDefault();
@@ -43,10 +45,10 @@
     $.each( sendMailItems, function(i, field) {
       el[field.name] = field.value;
     });
-    if (el.nome === '' || el.nome === 'Seu nome (obrigatório)') {
+    if (el.nome === '') {
       message.push('Nome é obrigatório');
     }
-    if (el.email === '' || el.email === 'Seu nome (obrigatório)') {
+    if (el.email === '') {
       message.push('Email é obrigatório');
     }
     //  Return message for user
@@ -81,4 +83,3 @@
     }
   });
 })(jQuery);
-
