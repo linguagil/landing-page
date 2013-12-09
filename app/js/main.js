@@ -3,7 +3,9 @@
   /**
    *  Calling fastclick in application
    */
+  /* breaking jshint
   FastClick.attach(document.body);
+  */
 
   $('#menu-close, #menu-toggle').click(function(e) {
     e.preventDefault();
@@ -16,7 +18,7 @@
    * @return {void}
    */
   function activeScrollTop( scrollHeight ) {
-      $('html, body').animate({ scrollTop: scrollHeight }, 'fast');
+    $('html, body').animate({ scrollTop: scrollHeight }, 'fast');
   }
 
   /**
@@ -25,20 +27,20 @@
    * @return {void}
    */
   function activeCloseAlertMessage( ) {
-      $('.close').on('click', function(){
-          $(this).parents('.send-mail-message').slideUp('fast').html('');
-      });
+    $('.close').on('click', function(){
+      $(this).parents('.send-mail-message').slideUp('fast').html('');
+    });
   }
 
   //  FORM VALIDATION SEND EMAIL
   $('#send-mail').submit( function(event){
     event.preventDefault();
-    var send_mail_items = $('#send-mail').serializeArray(),
-        $send_mail_message = $('.send-mail-message'),
+    var sendMailItems = $('#send-mail').serializeArray(),
+        $sendMailMessage = $('.send-mail-message'),
         el = {},
         message = []
     ;
-    $.each( send_mail_items, function(i, field) {
+    $.each( sendMailItems, function(i, field) {
       el[field.name] = field.value;
     });
     if (el.nome === '' || el.nome === 'Seu nome (obrigatório)') {
@@ -49,21 +51,21 @@
     }
     //  Return message for user
     if( message.length !== 0) {
-      $send_mail_message.html('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button><p>' + message.join('<br/>') + '</p></div>' )
+      $sendMailMessage.html('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button><p>' + message.join('<br/>') + '</p></div>' )
                         .slideDown('fast');
-      activeScrollTop($send_mail_message.offset().top - 100 );
+      activeScrollTop($sendMailMessage.offset().top - 100 );
       //  Activate alert close click
       activeCloseAlertMessage();
       return;
     }
 
     $.post('save_email.php', el, function(data) {
-      $send_mail_message.html(data);
-      activeScrollTop($send_mail_message.offset().top - 100);
+      $sendMailMessage.html(data);
+      activeScrollTop($sendMailMessage.offset().top - 100);
       //  Activate alert close click
       activeCloseAlertMessage();
     });
-  })
+  });
 
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') || location.hostname === this.hostname) {
