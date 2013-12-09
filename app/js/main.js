@@ -1,5 +1,9 @@
-( function(window, document, $, undefined) {
+(function($) {
   'use strict';
+  /**
+   *  Calling fastclick in application
+   */
+  FastClick.attach(document.body);
 
   $('#menu-close, #menu-toggle').click(function(e) {
     e.preventDefault();
@@ -74,5 +78,5 @@
       }
     }
   });
-}(this, this.document, this.jQuery));
+})(jQuery);
 
