@@ -222,7 +222,7 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
           src: [
-            '*.{ico,png,txt}',
+            '*.{ico,php,png,txt}',
             '.htaccess',
             'img/{,*/}*.{gif,webp}',
             'css/fonts/*'
@@ -270,10 +270,26 @@ module.exports = function (grunt) {
     },
     htmllint: {
        dist: ['<%= yeoman.dist %>/*.html']
+    },
+    rsync: {
+        options: {
+            args: ["--verbose"],
+            exclude: [".git*","*.scss","node_modules"],
+            recursive: true
+        },
+        prod: {
+            options: {
+                src: '<%= yeoman.app %>/', //dist is not ok.
+                dest: "/home/linguagil/linguagil.com.br/",
+                host: "linguagil@linguagil.com.br",
+                syncDestIgnoreExcl: true
+            }
+        }
     }
   });
 
   grunt.loadNpmTasks('grunt-html');
+  grunt.loadNpmTasks('grunt-rsync');
 
   grunt.registerTask('server', function (target) {
     if (target === 'dist') {
@@ -302,6 +318,10 @@ module.exports = function (grunt) {
     'uglify',
     'rev',
     'usemin'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'rsync:prod'
   ]);
 
   grunt.registerTask('travis', [
