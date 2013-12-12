@@ -204,8 +204,13 @@
     </footer>
     <!-- /Footer -->
 
-    <!-- build:js({.tmp,app}) js/plugins.js -->
+
     <script src="bower_components/jquery/jquery.min.js"></script>
+    <script type="text/javascript">
+	window.jQuery || document.write('<script type="text/javascript" src="bower_components/jquery/jquery.min.js"><\/script>');
+    </script>
+
+    <!-- build:js({.tmp,app}) js/plugins.js -->
     <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- endbuild -->
