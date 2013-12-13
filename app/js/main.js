@@ -9,10 +9,11 @@
   //  Add target blank in realtime for htmllint validation
   $('a[rel="external"]').attr('target','_blank');
 
-  $('#menu-close, #menu-toggle').click(function(e) {
+  $('#menu-close, #menu-toggle, .sidebar-nav li a').click(function(e) {
     e.preventDefault();
     $('#sidebar-wrapper').toggleClass('active');
   });
+
 
   /**
    * Active scroll to top of target element

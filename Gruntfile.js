@@ -1,3 +1,4 @@
+// Generated on 2013-10-07 using generator-angular 0.4.0
 'use strict';
 var LIVERELOAD_PORT = 35730;
 var lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT });
@@ -189,10 +190,15 @@ module.exports = function (grunt) {
     htmlmin: {
       dist: {
         options: {
+          /*removeCommentsFromCDATA: true,
+          // https://github.com/yeoman/grunt-usemin/issues/44
+          //collapseWhitespace: true,
           collapseBooleanAttributes: true,
+          removeAttributeQuotes: true,
           removeRedundantAttributes: true,
           useShortDoctype: true,
-          removeEmptyAttributes: true
+          removeEmptyAttributes: true,
+          removeOptionalTags: true*/
         },
         files: [{
           expand: true,
@@ -205,7 +211,7 @@ module.exports = function (grunt) {
     bower: {
       install: {
         verbose: true,
-      } 
+      }
     },
     // Put files not handled in other tasks here
     copy: {
@@ -306,10 +312,10 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'autoprefixer',
     'concat',
-    'copy:dist',
     //'cdnify',
     'cssmin',
     'uglify',
+    'copy:dist',
     'rev',
     'usemin'
   ]);

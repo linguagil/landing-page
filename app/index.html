@@ -12,14 +12,15 @@
 
     <title>Grupo Linguágil</title>
 
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- build:css({.tmp,app}) css/main.css -->
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+
     <link href="css/style.css" rel="stylesheet">
     <!-- endbuild -->
   </head>
 
-  <body class="square-reticle">
+  <body>
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -40,7 +41,7 @@
         <li><a href="#about">Sobre</a></li>
         <li><a href="#services">Saiba mais</a></li>
   <!--      <li><a href="#portfolio">Eventos anteriores</a></li> -->
-	<!--      <li><a href="#contact">Localização</a></li> -->
+    <!--      <li><a href="#contact">Localização</a></li> -->
       </ul>
     </div>
     <!-- /Side Menu -->
@@ -56,7 +57,7 @@
     <!-- /Full Page Image Header Area -->
 
     <!-- Intro -->
-    <div id="about" class="intro">
+    <div id="about" class="intro square-reticle">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
@@ -204,9 +205,14 @@
     </footer>
     <!-- /Footer -->
 
-    <!-- build:js({.tmp,app}) js/plugins.js -->
-    <script src="bower_components/jquery/jquery.min.js"></script>
+    <!-- build:js js/plugins.js -->
     <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    window.jQuery || document.write('<script type="text/javascript" src="bower_components/jquery/jquery.min.js"><\/script>');
+    /*]]>*/
+    </script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- endbuild -->
 
