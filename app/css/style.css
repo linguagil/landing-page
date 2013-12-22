@@ -167,6 +167,8 @@ i.service-icon {
   background-size: cover;
 }
 
+/* Sponsors */
+
 /* Portfolio */
 
 .portfolio {
@@ -227,7 +229,7 @@ i.scroll:hover {
 @media (max-width: 768px) {
 
   .header {
-    background: url(../img/bg.jpg) no-repeat center center scroll;
+    background: url(../img/home-background.jpg) no-repeat center center scroll;
   }
 
   .callout {
