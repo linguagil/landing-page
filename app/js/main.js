@@ -21,10 +21,10 @@
 
   $('.sponsors-item').on({
     mouseover: function(){
-      $(this).find('.corner-description').fadeIn('fast');
+      $(this).find('.corner-description').show();
     },
     mouseout: function(){
-      $(this).find('.corner-description').fadeOut('fast');
+      $(this).find('.corner-description').hide();
     }
   });
 
