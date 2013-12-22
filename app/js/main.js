@@ -14,6 +14,19 @@
     $('#sidebar-wrapper').toggleClass('active');
   });
 
+  /**
+   * Sponsors
+   */
+  $('.corner-description').hide();
+
+  $('.sponsors-item').on({
+    mouseover: function(){
+      $(this).find('.corner-description').fadeIn('fast');
+    },
+    mouseout: function(){
+      $(this).find('.corner-description').fadeOut('fast');
+    }
+  });
 
   /**
    * Active scroll to top of target element

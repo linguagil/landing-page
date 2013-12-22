@@ -169,9 +169,29 @@ i.service-icon {
 
 /* Sponsors */
 
+.corner-description{
+  opacity: 0.8;
+  position: absolute;
+  bottom: -11px;
+  left: 0px;
+  right: 0px;
+  padding: 5px 0px;
+  color: #ffffff;
+  background: #000000;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  border-radius: 0 0 4px 4px;
+  width: 262px;
+  margin-left: 15px;
+}
+
+/* Sponsors */
+
 /* Portfolio */
 
-.portfolio {
+.portfolio, .sponsors {
   padding: 50px 0;
 }
 

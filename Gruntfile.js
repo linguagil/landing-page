@@ -105,8 +105,6 @@ module.exports = function (grunt) {
       options: {
         jshintrc: '.jshintrc',
         ignores: [
-          '<%= yeoman.app %>/js/vendor/jquery-1.10.1.min.js',
-          '<%= yeoman.app %>/js/vendor/html5-3.6-respond-1.1.0.min.js',
           'Gruntfile.js'
         ]
       },
