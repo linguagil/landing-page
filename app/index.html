@@ -12,6 +12,7 @@
 
     <title>Grupo Linguágil</title>
 
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css" />
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- build:css({.tmp,app}) css/main.css -->
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
@@ -41,8 +42,8 @@
         <li><a href="#about">Sobre</a></li>
         <li><a href="#services">Saiba mais</a></li>
         <li><a href="#sponsors">Patrocinadores</a></li>
+        <li><a href="#location">Localização</a></li>
   <!--      <li><a href="#portfolio">Eventos anteriores</a></li> -->
-    <!--      <li><a href="#contact">Localização</a></li> -->
       </ul>
     </div>
     <!-- /Side Menu -->
@@ -206,11 +207,23 @@
     </div>
     <!-- /Call to Action -->
 
-    <!-- Map
-    <div id="contact" class="map">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=UCSAL+-+Campus+da+Federa%C3%A7%C3%A3o+-+Avenida+Cardeal+da+Silva,+Salvador+-+Bahia&amp;aq=0&amp;oq=cat%C3%B3lica&amp;sll=-12.981036,-38.496094&amp;sspn=0.006001,0.010568&amp;ie=UTF8&amp;hq=UCSAL+-+Campus+da+Federa%C3%A7%C3%A3o+-+Avenida+Cardeal+da+Silva,&amp;hnear=Salvador+-+Bahia&amp;ll=-12.997213,-38.508839&amp;spn=0.059029,0.007795&amp;t=m&amp;output=embed"></iframe><br /><small>Visualizar <a href="https://maps.google.com.br/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=UCSAL+-+Campus+da+Federa%C3%A7%C3%A3o+-+Avenida+Cardeal+da+Silva,+Salvador+-+Bahia&amp;aq=0&amp;oq=cat%C3%B3lica&amp;sll=-12.981036,-38.496094&amp;sspn=0.006001,0.010568&amp;ie=UTF8&amp;hq=UCSAL+-+Campus+da+Federa%C3%A7%C3%A3o+-+Avenida+Cardeal+da+Silva,&amp;hnear=Salvador+-+Bahia&amp;ll=-12.997213,-38.508839&amp;spn=0.059029,0.007795&amp;t=m" style="color:#0000FF;text-align:left">Salvador - BA</a> no Google Maps</small>
+    <!-- Location -->
+    <div id="location" class="location">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2>Localização</h2>
+            <p>Universidade Salvador - UNIFACS, Avenida Luís Viana - Paralela, Salvador - BA</p>
+            <p>OU</p>
+            <p>...após compartilhar a sua localização no mapa, clique no ícone do linguágil ou nos botões "<b>Local do evento</b>" e "<b>Minha localização</b>".</p>
+          </div>
+        </div>
+      </div>
     </div>
-    /Map -->
+    <!-- Location -->
+    <!-- Map -->
+    <div id="contact" class="map"></div>
+    <!--/Map -->
 
     <!-- Footer -->
     <footer>
@@ -233,6 +246,7 @@
     </footer>
     <!-- /Footer -->
 
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <!-- build:js js/plugins.js -->
     <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
@@ -242,6 +256,7 @@
     /*]]>*/
     </script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/gmaps/gmaps.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) js/scripts.js -->
