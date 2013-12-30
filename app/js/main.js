@@ -1,9 +1,14 @@
+/* global alert */
+
 (function($) {
   'use strict';
   /**
    *  Calling fastclick in application
    */
-  var FastClick = window.FastClick || {};
+  var FastClick = window.FastClick || {},
+      GMaps = window.GMaps || {}
+  ;
+
   FastClick.attach(document.body);
 
   //  Add target blank in realtime for htmllint validation
@@ -127,17 +132,17 @@
         lng: position.coords.longitude.toFixed(6)
       };
     },
-    error: function(error) {
+    error: function() {
       /*  Add Salvador Location*/
       mapOpts.origin = {
         lat: -12.971606,
         lng: -38.501587
       };
     },
-    not_supported: function() {
-      alert("Your browser does not support geolocation");
-    },
     always: function() {
+      if ( !navigator.geolocation ) {
+        alert('Your browser does not support geolocation');
+      }
       /* Init Gmaps class*/
       map = new GMaps({
         div: '#contact',
@@ -145,8 +150,8 @@
         lng: mapOpts.origin.lng,
         zoomControl : true,
         zoomControlOpt: {
-            style : 'SMALL',
-            position: 'TOP_LEFT'
+          style : 'SMALL',
+          position: 'TOP_LEFT'
         }
       });
 
