@@ -4,7 +4,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: "Open Sans";
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 16px;
 }
 
@@ -12,7 +12,9 @@ h2{
   font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
+  font-family: "Open Sans","Arial",sans-serif;
 }
+
 .vert-text {
   display: table-cell;
   vertical-align: middle;
@@ -36,7 +38,7 @@ h2{
   margin-left: -250px;
   left: 0;
   width: 250px;
-  background: #000;
+  background: #2E3339;
   position: fixed;
   height: 100%;
   overflow-y: auto;
@@ -55,6 +57,7 @@ h2{
   list-style: none;
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
 }
 
 .sidebar-nav li {
@@ -63,14 +66,14 @@ h2{
 }
 
 .sidebar-nav li a {
-  color: #999999;
+  color: #C5D2E1;
   display: block;
   text-decoration: none;
 }
 
 .sidebar-nav li a:hover {
   color: #fff;
-  background: rgba(255,255,255,0.2);
+  background: #252A30;
   text-decoration: none;
 }
 
@@ -143,7 +146,7 @@ h2{
 /* Services */
 
 .services {
-  background: #7fbbda;
+  background: #19ACCA;
   padding: 50px 0;
   color: #ffffff;
 }
@@ -393,8 +396,61 @@ i.scroll:hover {
 .icon:hover .glyphicon:after {
   bottom: -10px;
 }
+
+.parallax-text{
+  background-color: rgba(37,40,46,0.8);
+  color: #fff;
+  font-family: "Open Sans","Arial",sans-serif;
+  font-size: 60px;
+  font-weight: lighter;
+  line-height: 75px;
+  padding-right: 10px;
+  padding-left: 10px;
+  clear: both;
+}
+
 @media (max-width: 768px) {
   .icon {
     margin: 30px 0;
   }
+
+  .parallax-text{
+    font-size: 31px;
+    line-height: 39px
+  }
+}
+.green{
+  background: #16a085;
+}
+.blue{
+  background: #19ACCA;
+}
+.black{
+  background: #373737;
+}
+#call-for-papers{
+  background: #373737;
+  color: #FFF;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid #D83E40;
+  display: table;
+  height: 200px;
+  width: 100%;
+  background: url('../img/call-for-papers.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#about {
+  background: #F2F2F2;
+  border-top: 4px solid #D83E40;
+}
+
+.btn-call-for-papers{
+  margin-bottom: -55px;
+}
+.border-call-for-papers{
+  background: #D83E40;
 }
