@@ -19,6 +19,7 @@
     "jquery": "~2.0.3",
     "bootstrap": "~3.0.3",
     "fastclick": "~0.6.10",
-    "gmaps": "~0.4.9"
+    "gmaps": "~0.4.9",
+    "mediaelement": "~2.13.1"
   }
 }

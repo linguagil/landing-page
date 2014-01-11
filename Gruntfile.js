@@ -267,6 +267,7 @@ module.exports = function (grunt) {
       }
     },
     htmllint: {
+       app: ['<%= yeoman.app %>/*.html'],
        dist: ['<%= yeoman.dist %>/*.html']
     },
     rsync: {
@@ -306,7 +307,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'jshint',
-    'htmllint',
+    'htmllint:app',
     'clean:dist',
     'useminPrepare',
     'concurrent:dist',
@@ -328,7 +329,7 @@ module.exports = function (grunt) {
     'bower:install',
     'jshint',
     'build',
-    'htmllint'
+    'htmllint:dist'
   ]);
 
   grunt.registerTask('default', [

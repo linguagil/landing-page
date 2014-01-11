@@ -1,5 +1,4 @@
-/* global alert */
-
+/* globals alert */
 (function($) {
   'use strict';
   /**
@@ -48,7 +47,8 @@
    * @return {void}
    */
   function activeCloseAlertMessage( ) {
-    $('.close').on('click', function(){
+    $('.close').on('click', function(e){
+      e.preventDefault();
       $(this).parents('.send-mail-message').slideUp('fast').html('');
     });
   }
@@ -101,6 +101,98 @@
       }
     }
   });
+
+  /**
+   * Render video
+   */
+  //  Calling video target
+  $('.video-target').on('click', function(e){
+    e.preventDefault();
+    var $videoTarget = $(this),
+        targetID = $videoTarget.data('target'),
+        targetVideo = $videoTarget.data('video-src'),
+        videoWidth = $videoTarget.data('width'),
+        videoHeight = $videoTarget.data('height')
+    ;
+
+    if ( $(window).width() <= 600) {
+      var $imgResponsive = $('.img-responsive');
+      videoWidth = $imgResponsive.width();
+      videoHeight = $imgResponsive.height();
+    }
+    getVideoFileFromPlayer(targetID, {
+      'videoPath': targetVideo,
+      'width': videoWidth,
+      'height': videoHeight
+    });
+  });
+
+  /**
+   * Render Video player
+   * @param  {[type]} target  DOMElement target
+   * @param  {[type]} options Array options
+   * @return {[void]}
+   */
+  function getVideoFileFromPlayer(target, options) {
+
+    var type = '',
+        $target = $(target);
+
+    if( options.videoPath.indexOf('vimeo') !== -1 ) {
+      type = 'type="video/vimeo"';
+    }
+    if( options.videoPath.indexOf('youtube') !== -1) {
+      type = 'type="video/youtube"';
+    }
+
+    options.count = $('.video-player').size() + 1;
+
+    /**
+     *   Width and height verification
+     *   If you want get container width and height
+     */
+    $target.html('<video class="video-player" autoplay="true" width="'+options.width+'" height="'+options.height+'" id="player'+ options.count +'" src="' + options.videoPath + '" ' + type + ' /></video>');
+
+    $('#player'+ options.count).mediaelementplayer({
+      //enableAutosize: true,
+      // if the <video width> is not specified, this is the default
+      //defaultVideoWidth: 500,
+      // if the <video height> is not specified, this is the default
+      //defaultVideoHeight: 400,
+      // if set, overrides <video width>
+      /*videoWidth: -1,
+      // if set, overrides <video height>
+      videoHeight: -1,*/
+      // show framecount in timecode (##:00:00:00)
+      showTimecodeFrameCount: true,
+      // used when showTimecodeFrameCount is set to true
+      framesPerSecond: 25,
+      // Hide controls when playing and mouse is not over the video
+      alwaysShowControls: true,
+      // force iPad's native controls
+      iPadUseNativeControls: true,
+      // force iPhone's native controls
+      iPhoneUseNativeControls: true,
+      // force Android's native controls
+      AndroidUseNativeControls: true,
+      // when this player starts, it will pause other players
+      pauseOtherPlayers: true,
+      // allows testing on HTML5, flash, silverlight
+      // auto: attempts to detect what the browser can do
+      // auto_plugin: prefer plugins and then attempt native HTML5
+      // native: forces HTML5 playback
+      // shim: disallows HTML5, will attempt either Flash or Silverlight
+      // none: forces fallback view
+      mode: 'auto',
+      // remove or reorder to change plugin priority and availability
+      plugins: ['vimeo', 'youtube', 'native', 'flash', 'silverlight']
+    });
+    //  Removing controls if video == vimeo
+    if( options.videoPath.indexOf('vimeo') !== -1 ) {
+      $target.find('.mejs-controls').remove();
+    }
+
+  }
 
   /**
    * Location

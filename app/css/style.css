@@ -7,6 +7,9 @@ body {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 16px;
 }
+iframe, object, embed {
+  max-width: 100%;
+}
 
 h2{
   font-size: 40px;
@@ -185,6 +188,7 @@ i.service-icon {
 
 .sponsors{
   background: #F7F9F9;
+  border-bottom: 4px solid #0a5175;
 }
 .sponsors-item .img-thumbnail{
   border: 4px solid #DDE4E7;
@@ -210,7 +214,7 @@ i.service-icon {
 /* Sponsors */
 /* Portfolio */
 
-.portfolio, .sponsors {
+.portfolio, .sponsors, .registration {
   padding: 50px 0;
 }
 
@@ -409,16 +413,6 @@ i.scroll:hover {
   clear: both;
 }
 
-@media (max-width: 768px) {
-  .icon {
-    margin: 30px 0;
-  }
-
-  .parallax-text{
-    font-size: 31px;
-    line-height: 39px
-  }
-}
 .green{
   background: #16a085;
 }
@@ -428,6 +422,10 @@ i.scroll:hover {
 .black{
   background: #373737;
 }
+.red {
+  background: #D83E40;
+}
+
 #call-for-papers{
   background: #373737;
   color: #FFF;
@@ -453,4 +451,52 @@ i.scroll:hover {
 }
 .border-call-for-papers{
   background: #D83E40;
+}
+
+#videos{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: table;
+  min-height: 200px;
+  width: 100%;
+  background: #DBD9D7;
+  border-top: 4px solid #C5C5C5;
+  border-bottom: 4px solid #C5C5C5;
+}
+
+#videos h3 {
+  margin-bottom: 20px;
+}
+
+#registration {
+  color: #fff;
+}
+
+#iframe-inscricao{
+  border: none !important;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  overflow-x:hidden;
+  overflow-y:hidden;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    margin: 30px 0;
+  }
+
+  .parallax-text{
+    font-size: 31px;
+    line-height: 39px
+  }
+}
+
+
+@media (max-width: 992px) {
+  .corner-description {
+    display: none !important;
+    visibility: hidden;
+    height: 0;
+  }
 }
