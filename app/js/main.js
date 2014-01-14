@@ -5,7 +5,8 @@
    *  Calling fastclick in application
    */
   var FastClick = window.FastClick || {},
-      GMaps = window.GMaps || {}
+      GMaps = window.GMaps || {},
+      $window = $(window)
   ;
 
   FastClick.attach(document.body);
@@ -115,7 +116,7 @@
         videoHeight = $videoTarget.data('height')
     ;
 
-    if ( $(window).width() <= 600) {
+    if ( $window.width() <= 600) {
       var $imgResponsive = $('.img-responsive');
       videoWidth = $imgResponsive.width();
       videoHeight = $imgResponsive.height();
@@ -206,6 +207,9 @@
    * @return {[type]}      [description]
    */
   var drawRouteInMaps = function(opts) {
+    //  Clean oldest routes
+    map.cleanRoute();
+    
     map.drawRoute({
       origin: [opts.origin.lat , opts.origin.lng ],
       destination: [opts.destination.lat, opts.destination.lng],
@@ -327,4 +331,12 @@
       map.fitZoom();
     }
   });
+
+  $window.load( function(){
+    if ( $window.width() <= 600 ) {
+      $('.video-target').trigger('click');
+    }
+  });
+
+
 })(jQuery);

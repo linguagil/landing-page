@@ -453,6 +453,9 @@ i.scroll:hover {
   background: #D83E40;
 }
 
+.video-content {
+  margin-top: 20px;
+}
 #videos{
   padding-top: 20px;
   padding-bottom: 20px;
