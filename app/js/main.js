@@ -89,7 +89,7 @@
     });
   });
 
-  $('a[href*=#]:not([href=#])').click(function() {
+  $('a[href*=#][data-animation="scroll"]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') || location.hostname === this.hostname) {
 
       var target = $(this.hash);
@@ -209,7 +209,7 @@
   var drawRouteInMaps = function(opts) {
     //  Clean oldest routes
     map.cleanRoute();
-    
+
     map.drawRoute({
       origin: [opts.origin.lat , opts.origin.lng ],
       destination: [opts.destination.lat, opts.destination.lng],
