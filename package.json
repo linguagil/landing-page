@@ -1,7 +1,7 @@
 {
   "name": "Linguagil2014",
   "version": "0.0.10",
-  "repository": { 
+  "repository": {
     "type" : "git",
     "url" : "http://github.com/linguagil/landing-page.git"
   },
@@ -31,7 +31,6 @@
     "grunt-rsync": "~0.2.1",
     "load-grunt-tasks": "~0.1.0",
     "connect-livereload": "~0.2.0",
-    "grunt-google-cdn": "~0.2.0",
     "time-grunt": "~0.1.0",
     "grunt-bower-task": "~0.3.4"
   },

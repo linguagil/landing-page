@@ -252,11 +252,6 @@ module.exports = function (grunt) {
         'htmlmin'
       ]
     },
-    cdnify: {
-      dist: {
-        html: ['<%= yeoman.dist %>/*.html']
-      }
-    },
     uglify: {
       dist: {
         files: {
@@ -290,6 +285,32 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-html');
   grunt.loadNpmTasks('grunt-rsync');
 
+  grunt.registerTask('modifyImageLinkInScript', 'Task for replace image link in script file.', function(filename, imageTarget) {
+    var path = require('path'),
+        fs = require('fs'),
+        SCRIPTS_DIST_DIR = 'dist/js',
+        IMAGE_DIST_DIR = 'dist/img',
+        oldestImage = imageTarget
+    ;
+
+    fs.readdirSync(SCRIPTS_DIST_DIR).forEach(function(file) {
+      if ( file.indexOf(filename) !== (-1) ) {
+        filename = SCRIPTS_DIST_DIR+'/'+file;
+      }
+    });
+
+    fs.readdirSync(IMAGE_DIST_DIR).forEach(function(file) {
+      if ( file.indexOf(oldestImage) !== (-1) ) {
+        imageTarget = file;
+      }
+    });
+
+    var data = fs.readFileSync(filename, 'utf8');
+    data = data.replace(oldestImage, imageTarget);
+    fs.writeFileSync(filename, data, 'utf8');
+
+  });
+
   grunt.registerTask('server', function (target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
@@ -313,12 +334,12 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'autoprefixer',
     'concat',
-    //'cdnify',
     'cssmin',
     'uglify',
     'copy:dist',
     'rev',
-    'usemin'
+    'usemin',
+    'modifyImageLinkInScript:scripts.js:pin.png'
   ]);
 
   grunt.registerTask('deploy', [

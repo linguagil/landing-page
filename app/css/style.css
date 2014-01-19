@@ -469,6 +469,7 @@ i.scroll:hover {
 .video-content {
   margin-top: 20px;
 }
+
 #videos{
   padding-top: 20px;
   padding-bottom: 20px;
@@ -640,6 +641,18 @@ i.scroll:hover {
     font-size: 31px;
     line-height: 39px
   }
+
+  .video-content .col-md-6:before,
+  .video-content .col-md-6:after {
+    display: table;
+    content: " ";
+  }
+
+  .video-content .col-md-6:after {
+    clear: both;
+  }
+
+
 }
 
 
