@@ -12,12 +12,23 @@
   FastClick.attach(document.body);
 
   //  Add target blank in realtime for htmllint validation
-  $('a[rel="external"]').attr('target','_blank');
+  $('a[rel="external"], .external').attr('target','_blank');
 
   $('#menu-close, #menu-toggle, .sidebar-nav li a').click(function(e) {
     e.preventDefault();
     $('#sidebar-wrapper').toggleClass('active');
   });
+
+  $('.tooltip').tooltip();
+
+  $('.thumbnail').hover(
+    function(){
+      $(this).find('.caption').slideDown(250); //.fadeIn(250)
+    },
+    function(){
+      $(this).find('.caption').slideUp(250); //.fadeOut(205)
+    }
+  );
 
   /**
    * Sponsors

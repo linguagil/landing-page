@@ -18,6 +18,9 @@ h2{
   font-family: "Open Sans","Arial",sans-serif;
 }
 
+.no-opacity{
+  opacity: 1 !important;
+}
 .vert-text {
   display: table-cell;
   vertical-align: middle;
@@ -646,6 +649,27 @@ i.scroll:hover {
   margin-top: 5px;
 }
 /* Timeline */
+
+
+.thumbnail {
+  position:relative;
+  overflow:hidden;
+}
+
+.caption {
+  position:absolute;
+  top:0;
+  right:0;
+  width:100%;
+  height:100%;
+  padding:2%;
+  display: none;
+  text-align:center;
+  opacity: 0.8;
+  color:#fff !important;
+  z-index:2;
+}
+
 
 @media (max-width: 768px) {
   .icon {
