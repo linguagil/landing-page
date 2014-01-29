@@ -1,6 +1,7 @@
 /* globals alert */
 (function($) {
   'use strict';
+
   /**
    *  Calling fastclick in application
    */
@@ -19,30 +20,19 @@
     $('#sidebar-wrapper').toggleClass('active');
   });
 
-  $('.tooltip').tooltip();
-
-  $('.thumbnail').hover(
-    function(){
-      $(this).find('.caption').slideDown(250); //.fadeIn(250)
-    },
-    function(){
-      $(this).find('.caption').slideUp(250); //.fadeOut(205)
-    }
-  );
-
   /**
    * Sponsors
    */
-  $('.corner-description').hide();
-
-  $('.sponsors-item').on({
-    mouseover: function(){
-      $(this).find('.corner-description').show();
-    },
-    mouseout: function(){
-      $(this).find('.corner-description').hide();
-    }
-  });
+  if ( $window.width() >= 886) {
+    $('.thumbnail').hover(
+      function(){
+        $(this).find('.caption').slideDown(250); //.fadeIn(250)
+      },
+      function(){
+        $(this).find('.caption').slideUp(250); //.fadeOut(205)
+      }
+    );
+  }
 
   /**
    * Active scroll to top of target element
