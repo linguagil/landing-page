@@ -299,6 +299,10 @@ i.scroll:hover {
   border: 2px solid #fff;
 }
 
+.btn, .input-group-lg>.form-control, .input-group-lg>.input-group-addon, .input-group-lg>.input-group-btn>.btn {
+  border-radius: 0;
+}
+
 .square-reticle{
     background: #F2F2F2;
     background-image: -moz-linear-gradient(45deg, rgba(0,0,0,.15) 1px, transparent 1px);
