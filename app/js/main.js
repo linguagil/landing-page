@@ -15,7 +15,7 @@
   //  Add target blank in realtime for htmllint validation
   $('a[rel="external"], .external').attr('target','_blank');
 
-  $('#menu-close, #menu-toggle, .sidebar-nav li a').click(function(e) {
+  $('#menu-close, #menu-toggle, .sidebar-nav li a[data-animation="scroll"]').click(function(e) {
     e.preventDefault();
     $('#sidebar-wrapper').toggleClass('active');
   });
