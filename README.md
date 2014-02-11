@@ -49,3 +49,10 @@ Para executar os testes.
 grunt
 ```
 
+## Implantação
+
+Enquanto o travis ainda não faz o deploy, para fazer digite.
+
+```
+grunt rsync:prod
+```
