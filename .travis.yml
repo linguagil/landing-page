@@ -1,6 +1,7 @@
 language: node_js
 node_js:
-  - "0.11"
   - "0.10"
 after_success:
+  - ssh-keyscan -H 69.163.132.184 >> ~/.ssh/known_hosts 
+  - ssh-keyscan -H linguagil.com.br >> ~/.ssh/known_hosts 
   - grunt deploy
