@@ -342,15 +342,16 @@ module.exports = function (grunt) {
     'modifyImageLinkInScript:scripts.js:pin.png'
   ]);
 
-  grunt.registerTask('deploy', [
-    'rsync:prod'
-  ]);
-
   grunt.registerTask('travis', [
     'bower:install',
     'jshint',
     'build',
     'htmllint:dist'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'travis',
+    'rsync:prod'
   ]);
 
   grunt.registerTask('default', [
