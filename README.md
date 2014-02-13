@@ -1,5 +1,6 @@
 landing-page
 ============
+[![Build Status](https://drone.io/github.com/linguagil/landing-page/status.png)](https://drone.io/github.com/linguagil/landing-page/latest)
 [![Build Status](https://travis-ci.org/linguagil/landing-page.png)](https://travis-ci.org/linguagil/landing-page)
 
 
@@ -47,12 +48,4 @@ Para executar os testes.
 
 ```
 grunt
-```
-
-## Implantação
-
-Enquanto o travis ainda não faz o deploy, para fazer digite.
-
-```
-grunt rsync:prod
 ```
