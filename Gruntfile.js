@@ -306,7 +306,8 @@ module.exports = function (grunt) {
     });
 
     var data = fs.readFileSync(filename, 'utf8');
-    data = data.replace(oldestImage, imageTarget);
+    data = data.replace(new RegExp(oldestImage, 'g'), imageTarget);
+
     fs.writeFileSync(filename, data, 'utf8');
 
   });

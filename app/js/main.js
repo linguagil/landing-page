@@ -271,7 +271,7 @@
         lat: -12.961174,
         lng: -38.432032,
         icon: '/img/pin.png',
-        title: 'LinguÁgil 2014 - UNIFACS.'
+        title: 'LinguÁgil 2014 - UNIFACS ( 13 e 14 de março ).'
       };
 
       map.addMarker({
@@ -281,17 +281,34 @@
         icon: mapOpts.destination.icon,
         infoWindow: {
           content: '<p>' + mapOpts.destination.title + '</p>' +
-                  '<p><a id="draw-destination-route">Como chegar</a></p>'
+                  '<p><a id="draw-destination-route" data-talk="false">Como chegar</a></p>'
         },
       });
 
-      var $document = $(document);
+      mapOpts.destinationTalks = {
+        lat: -12.987737,
+        lng: -38.466493,
+        icon: '/img/pin.png',
+        title: 'LinguÁgil 2014 - Empresarial Tomé de Souza ( 15 de março ).'
+      };
 
-      $document.on('click', '#draw-destination-route', function(e) {
+      map.addMarker({
+        lat:  mapOpts.destinationTalks.lat,
+        lng:  mapOpts.destinationTalks.lng,
+        title:  mapOpts.destinationTalks.title,
+        icon: mapOpts.destinationTalks.icon,
+        infoWindow: {
+          content: '<p>' + mapOpts.destinationTalks.title + '</p>' +
+                  '<p><a id="draw-destination-route" data-talk="true">Como chegar</a></p>'
+        },
+      });
+
+      $(document).on('click', '#draw-destination-route', function(e) {
         e.preventDefault();
+        var destinationTalk = $(this).data('talk');
         var opts = {
             origin: mapOpts.origin,
-            destination : mapOpts.destination
+            destination : (destinationTalk ? mapOpts.destinationTalks : mapOpts.destination)
           }
         ;
         drawRouteInMaps(opts);
@@ -321,10 +338,26 @@
           border: 'solid 1px #717B87',
           background: '#fff'
         },
-        content: 'Local do evento',
+        content: 'Local do evento dias 13 e 14 de março',
         events: {
           click: function(){
             map.setCenter(mapOpts.destination.lat, mapOpts.destination.lng);
+          },
+        }
+      });
+
+      map.addControl({
+        position: 'top_right',
+        style: {
+          margin: '5px',
+          padding: '1px 6px',
+          border: 'solid 1px #717B87',
+          background: '#fff'
+        },
+        content: 'Local do evento dia 15 de março',
+        events: {
+          click: function(){
+            map.setCenter(mapOpts.destinationTalks.lat, mapOpts.destinationTalks.lng);
           },
         }
       });
