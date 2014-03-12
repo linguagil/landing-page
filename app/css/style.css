@@ -425,7 +425,7 @@ i.scroll:hover {
   bottom: -10px;
 }
 
-.parallax-text{
+.parallax-text, .parallax-text-mini{
   background-color: rgba(37,40,46,0.8);
   color: #fff;
   font-family: "Open Sans","Arial",sans-serif;
@@ -437,9 +437,9 @@ i.scroll:hover {
   clear: both;
 }
 
-footer .parallax-text{
-  font-size: 23px;
-  line-height: 29px;
+footer .parallax-text, .parallax-text-mini{
+  font-size: 23px !important;
+  line-height: 29px !important;
 }
 
 .green{
