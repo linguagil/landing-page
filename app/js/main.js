@@ -24,7 +24,6 @@
     var date = new Date(),
       month = date.getMonth(),
       day = date.getDate(),
-      today = date.getMonth()+'/'+date.getDay(),
       $navTabs = $('.nav-tabs')
     ;
     if (month === 2 && day <= 13) {
