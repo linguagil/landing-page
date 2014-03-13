@@ -27,7 +27,7 @@
       $navTabs = $('.nav-tabs')
     ;
     if (month === 2 && day <= 13) {
-      $navTabs.find('a[href="#tab2"]').trigger('click');
+      $navTabs.find('a[href="#tab1"]').trigger('click');
     } else if (month === 2 && day === 14) {
       $navTabs.find('a[href="#tab2"]').trigger('click');
     } else {
