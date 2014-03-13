@@ -20,6 +20,22 @@
     $('#sidebar-wrapper').toggleClass('active');
   });
 
+  if ( $('.nav-tabs')[0] ) {
+    var date = new Date(),
+      month = date.getMonth(),
+      day = date.getDate(),
+      today = date.getMonth()+'/'+date.getDay(),
+      $navTabs = $('.nav-tabs')
+    ;
+    if (month === 2 && day <= 13) {
+      $navTabs.find('a[href="#tab2"]').trigger('click');
+    } else if (month === 2 && day === 14) {
+      $navTabs.find('a[href="#tab2"]').trigger('click');
+    } else {
+      $navTabs.find('a[href="#tab3"]').trigger('click');
+    }
+  }
+
   /**
    * Sponsors
    */
