@@ -271,7 +271,7 @@
         lat: -12.979808,
         lng: -38.458562,
         icon: '/img/pin.png',
-        title: 'LinguÁgil 2014 - UNIFACS ( 13 e 14 de março ).'
+        title: 'LinguÁgil 2014 - Empresarial Thomé de Souza ( 15 de março ).'
       };
 
       map.addMarker({
@@ -281,15 +281,16 @@
         icon: mapOpts.destination.icon,
         infoWindow: {
           content: '<p>' + mapOpts.destination.title + '</p>' +
-                  '<p><a id="draw-destination-route" data-talk="false">Como chegar</a></p>'
+                  '<p><a id="draw-destination-route" data-talk="false">Como chegar</a></p>' +
+                  '<p><a href="http://www.unifacs.br" target="_blank" >Website</a></p>'
         },
       });
 
       mapOpts.destinationTalks = {
-        lat: -12.987737,
-        lng: -38.466493,
+        lat: -12.961174,
+        lng: -38.432032,
         icon: '/img/pin.png',
-        title: 'LinguÁgil 2014 - Empresarial Tomé de Souza ( 15 de março ).'
+        title: 'LinguÁgil 2014 - UNIFACS ( 13 e 14 de março ).'
       };
 
       map.addMarker({
@@ -299,7 +300,8 @@
         icon: mapOpts.destinationTalks.icon,
         infoWindow: {
           content: '<p>' + mapOpts.destinationTalks.title + '</p>' +
-                  '<p><a id="draw-destination-route" data-talk="true">Como chegar</a></p>'
+                  '<p><a id="draw-destination-route" data-talk="true">Como chegar</a></p>' +
+                  '<p><a href="http://www.empresarialthomedesouza.com.br/localizacao.cfm" target="_blank" >Website</a></p>'
         },
       });
 
