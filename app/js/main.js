@@ -283,8 +283,8 @@
       map.setCenter(mapOpts.origin.lat, mapOpts.origin.lng);
 
       mapOpts.destination = {
-        lat: -12.979808,
-        lng: -38.458562,
+        lat: -12.961174,
+        lng: -38.432032,
         icon: '/img/pin.png',
         title: 'LinguÁgil 2014 - Empresarial Thomé de Souza ( 15 de março ).'
       };
@@ -302,8 +302,8 @@
       });
 
       mapOpts.destinationTalks = {
-        lat: -12.961174,
-        lng: -38.432032,
+        lat: -12.979808,
+        lng: -38.458562,
         icon: '/img/pin.png',
         title: 'LinguÁgil 2014 - UNIFACS ( 13 e 14 de março ).'
       };
