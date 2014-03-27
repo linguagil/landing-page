@@ -216,6 +216,14 @@ AddDefaultCharset utf-8
   # RewriteBase /
 </IfModule>
 
+Redirect /pesquisaMinicursoAppEngine https://docs.google.com/forms/d/1TxfOYK8J6fcFg1FRGCHgpvH-40OzidNxnO9USs2at80/viewform
+Redirect /pesquisaMinicursoPhonegap https://docs.google.com/forms/d/130STNTXK8UyDMtklLoefDcLY5DO3j_akRH6-k6zUNJo/viewform
+Redirect /pesquisaMinicursoALMOpenSource https://docs.google.com/forms/d/1Lh8FQ63UL3W3Od-byvB1oP6VCqYodXff74uvHOxxIZ8/viewform
+Redirect /pesquisaMinicursoAndroid https://docs.google.com/forms/d/1I-tknwP5EeAOTL_2jSj6BA2GYC4bkREJBLPGwQGdv7Q/viewform
+Redirect /pesquisaMinicursoNoSQLJava https://docs.google.com/forms/d/1iNW5yo3oakqUxhEBsI3Rohut4HUJv_FNmF_KwZmuKMw/viewform
+Redirect /pesquisaMinicursoPentaho https://docs.google.com/forms/d/18eSWy4DooRq01XB_b0NkVBu7PuSW93az4VGGsiGOakM/viewform
+Redirect /pesquisaPalestras https://docs.google.com/forms/d/1PUgTncnIMKKQyXQZEkBni5iIh_i_ieao2aJ48vJRvWY/viewform
+
 # ------------------------------------------------------------------------------
 # | Suppressing / Forcing the "www." at the beginning of URLs                  |
 # ------------------------------------------------------------------------------
