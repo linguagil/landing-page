@@ -437,6 +437,11 @@ i.scroll:hover {
   clear: both;
 }
 
+.parallax-text:hover, .parallax-text-mini:hover{
+  color: #fff;
+  text-decoration:none;
+}
+
 footer .parallax-text, .parallax-text-mini{
   font-size: 23px !important;
   line-height: 29px !important;
