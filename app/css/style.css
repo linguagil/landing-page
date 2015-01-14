@@ -35,6 +35,7 @@ h2{
 }
 
 /* Side Menu */
+
 #menu-close {
   position: relative;
   z-index: 100;
@@ -50,9 +51,7 @@ h2{
   overflow-y: auto;
   z-index: 1000;
   -webkit-transition: all 0.4s ease 0s;
-  -moz-transition: all 0.4s ease 0s;
   -ms-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
 
@@ -69,6 +68,11 @@ h2{
 .sidebar-nav li {
   line-height: 40px;
   text-indent: 20px;
+  border-bottom: 1px solid #555;
+}
+
+.sidebar-nav li:first {
+  margin-top: 20px;
 }
 
 .sidebar-nav li a {
@@ -89,13 +93,15 @@ h2{
 }
 
 .sidebar-nav > .sidebar-brand {
-  height: 55px;
+  height: 62px;
   line-height: 55px;
-  font-size: 18px;
+  font-size: 21px;
+  font-weight: bold;
+  color: #fff;
 }
 
 .sidebar-nav > .sidebar-brand a {
-  color: #999999;
+  color: #fff;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -109,19 +115,27 @@ h2{
   position: fixed;
   z-index: 1;
   border: 2px solid;
+  -webkit-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  border-radius: 3px;
+}
+
+#menu-toggle:hover {
+  color: #FFF;
+  background: #428bca;
+  border-color: #DEDEDE;
+  -webkit-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 #sidebar-wrapper.active {
   left: 250px;
   width: 250px;
   -webkit-transition: all 0.4s ease 0s;
-  -moz-transition: all 0.4s ease 0s;
   -ms-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
-
-  -webkit-box-shadow: 5px 0 5px rgba(0,0,0,.15);
-  -moz-box-shadow: 5px 0 5px rgba(0,0,0,.15);
   box-shadow: 5px 0 5px rgba(0,0,0,.15);
 }
 
@@ -135,11 +149,8 @@ h2{
   display: table;
   height: 100%;
   width: 100%;
-  position: relative;
-  background: url(../img/home-background.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url(../img/home-background.jpg) no-repeat center center;
+  /*background: inline-image($background-image-header) no-repeat center center;*/
   background-size: cover;
 }
 
@@ -278,10 +289,6 @@ i.scroll:hover {
 /* Responsive */
 
 @media (max-width: 768px) {
-
-  .header {
-    background: url(../img/home-background.jpg) no-repeat center center scroll;
-  }
 
   .callout {
     background: url(../img/callout.jpg) no-repeat center center scroll;
@@ -741,4 +748,12 @@ a.font-white, a.font-white:hover{
     visibility: hidden;
     height: 0;
   }
+}
+
+.img-speaker {
+  border: 5px solid #4DA8E5;
+}
+
+.speaker-name {
+  font-size: 30px;
 }

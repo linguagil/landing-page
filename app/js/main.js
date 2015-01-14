@@ -26,12 +26,14 @@
       day = date.getDate(),
       $navTabs = $('.nav-tabs')
     ;
-    if (month === 2 && day <= 13) {
+    if (month < 2 || (month === 2 && day <= 11)) {
       $navTabs.find('a[href="#tab1"]').trigger('click');
-    } else if (month === 2 && day === 14) {
+    } else if (month === 2 && day === 12) {
       $navTabs.find('a[href="#tab2"]').trigger('click');
-    } else {
+    } else if (month === 2 && day === 13) {
       $navTabs.find('a[href="#tab3"]').trigger('click');
+    } else {
+      $navTabs.find('a[href="#tab4"]').trigger('click');
     }
   }
 
@@ -283,10 +285,10 @@
       map.setCenter(mapOpts.origin.lat, mapOpts.origin.lng);
 
       mapOpts.destination = {
-        lat: -12.961174,
-        lng: -38.432032,
-        icon: '/img/pin.png',
-        title: 'LinguÁgil 2014 - UNIFACS ( 13 e 14 de março ).'
+        lat: -12.938570,
+        lng: -38.386982,
+        icon: '/images/pin.png',
+        title: 'LinguÁgil 2015 - SENAI CIMATEC ( 11 a 14 de março ).'
       };
 
       map.addMarker({
@@ -297,26 +299,7 @@
         infoWindow: {
           content: '<p>' + mapOpts.destination.title + '</p>' +
                   '<p><a id="draw-destination-route" data-talk="false">Como chegar</a></p>' +
-                  '<p><a href="http://www.unifacs.br" target="_blank" >Website</a></p>'
-        },
-      });
-
-      mapOpts.destinationTalks = {
-        lat: -12.979808,
-        lng: -38.458562,
-        icon: '/img/pin.png',
-        title: 'LinguÁgil 2014 - Empresarial Thomé de Souza ( 15 de março ).'
-      };
-
-      map.addMarker({
-        lat:  mapOpts.destinationTalks.lat,
-        lng:  mapOpts.destinationTalks.lng,
-        title:  mapOpts.destinationTalks.title,
-        icon: mapOpts.destinationTalks.icon,
-        infoWindow: {
-          content: '<p>' + mapOpts.destinationTalks.title + '</p>' +
-                  '<p><a id="draw-destination-route" data-talk="true">Como chegar</a></p>' +
-                  '<p><a href="http://www.empresarialthomedesouza.com.br/localizacao.cfm" target="_blank" >Website</a></p>'
+                  '<p><a href="http://portais.fieb.org.br/senai/senai-na-sua-cidade/salvador/cimatec.html" target="_blank" >Website</a></p>'
         },
       });
 
