@@ -149,7 +149,7 @@ h2{
   display: table;
   height: 100%;
   width: 100%;
-  background: url(../img/home-background.jpg) no-repeat center center;
+  background: url(../images/home-background.jpg) no-repeat center center;
   /*background: inline-image($background-image-header) no-repeat center center;*/
   background-size: cover;
 }
@@ -194,7 +194,7 @@ i.service-icon {
   display: table;
   height: 400px;
   width: 100%;
-  background: url('../img/background-last-event.jpg') no-repeat center center fixed;
+  background: url('../images/background-last-event.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -291,7 +291,7 @@ i.scroll:hover {
 @media (max-width: 768px) {
 
   .callout {
-    background: url(../img/callout.jpg) no-repeat center center scroll;
+    background: url(../images/callout.jpg) no-repeat center center scroll;
   }
 
   .map {
@@ -501,7 +501,7 @@ a.font-white, a.font-white:hover{
   display: table;
   height: 200px;
   width: 100%;
-  background: url('../img/call-for-papers.jpg') no-repeat center center fixed;
+  background: url('../images/call-for-papers.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
