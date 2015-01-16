@@ -546,9 +546,9 @@ a.font-white, a.font-white:hover{
 
 #iframe-inscricao{
   border: none !important;
-  width: 100%;
-  height: 700px;
-  overflow-x:hidden;
+  width: 100% !important;
+  height: 860px;
+  overflow-x: hidden;
 }
 
 .registration-form {
