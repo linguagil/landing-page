@@ -45,6 +45,7 @@
   "scripts": {
     "preinstall": "npm install -g grunt-cli bower jshint",
     "prestart": "npm install",
+    "postinstall": "bower install",
     "start": "grunt serve",
     "test": "grunt test"
   }
